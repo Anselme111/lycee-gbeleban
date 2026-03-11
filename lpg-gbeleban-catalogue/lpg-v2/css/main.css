@@ -1,0 +1,159 @@
+/* ══════════════════════════════════════════════════
+   LPG GBÉLÉBAN — CATALOGUE OFFICIEL
+   main.css — Variables, Reset, Typographie, Utilitaires
+══════════════════════════════════════════════════ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ── Variables ── */
+:root {
+  --B:  #1447A6;   /* bleu principal */
+  --B2: #1A5AC9;   /* bleu clair */
+  --B3: #EEF3FC;   /* bleu très pâle */
+  --O:  #F07520;   /* orange */
+  --O2: #b85210;   /* orange foncé */
+  --W:  #FFFFFF;
+  --G:  #F7F9FD;   /* gris bleuté */
+  --T:  #0B1F45;   /* texte sombre */
+  --T2: #556080;   /* texte secondaire */
+  --BD: #D8E2F5;   /* bordure */
+
+  /* Shadows */
+  --sh1: 0 2px 12px rgba(20,71,166,.08);
+  --sh2: 0 8px 32px rgba(20,71,166,.14);
+  --sh3: 0 20px 60px rgba(20,71,166,.18);
+  --sho: 0 4px 18px rgba(240,117,32,.35);
+
+  /* Sidebar */
+  --sb-w: 72px;
+  --sb-w-exp: 240px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--T);
+  background: var(--W);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+ul, ol { list-style: none; }
+
+/* ── Typographie ── */
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--O);
+  margin-bottom: .9rem;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--O);
+  border-radius: 2px;
+}
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--T);
+  margin-bottom: .6rem;
+}
+.section-title span { color: var(--O); }
+.section-sub {
+  font-size: .95rem;
+  color: var(--T2);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+/* ── Scroll Reveal ── */
+[data-sr] {
+  opacity: 0;
+  transform: translateY(28px);
+  filter: blur(4px);
+  transition: opacity .65s ease, transform .65s ease, filter .65s ease;
+}
+[data-sr].visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* ── Utilitaires ── */
+.tag {
+  display: inline-block;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: .22rem .75rem;
+  border-radius: 50px;
+}
+.tag-orange {
+  background: rgba(240,117,32,.15);
+  color: var(--O2);
+  border: 1px solid rgba(240,117,32,.3);
+}
+.tag-blue {
+  background: rgba(20,71,166,.1);
+  color: var(--B);
+  border: 1px solid rgba(20,71,166,.2);
+}
+.tag-white {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .65rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .03em;
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s;
+  border: none;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  background: var(--O);
+  color: #fff;
+  box-shadow: var(--sho);
+}
+.btn-primary:hover { box-shadow: 0 6px 22px rgba(240,117,32,.5); }
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.5);
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,.1);
+  border-color: #fff;
+}
+.btn-outline-blue {
+  background: transparent;
+  color: var(--B);
+  border: 2px solid var(--B);
+}
+.btn-outline-blue:hover { background: var(--B); color: #fff; }
