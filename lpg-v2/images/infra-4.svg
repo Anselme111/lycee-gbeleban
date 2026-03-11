@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#1447A6" opacity="0.15"/>
+  <rect width="800" height="500" fill="none" stroke="#1447A6" stroke-width="3" stroke-dasharray="12,8" opacity="0.4"/>
+  <text x="400" y="200" font-family="Arial,sans-serif" font-size="22" fill="#1447A6" text-anchor="middle" font-weight="700">📷 Infrastructure — Terrain de sport</text>
+  <text x="400" y="245" font-family="Arial,sans-serif" font-size="15" fill="#1447A6" text-anchor="middle" opacity="0.7">Remplacez ce fichier par votre photo</text>
+  <text x="400" y="285" font-family="Arial,sans-serif" font-size="13" fill="#1447A6" text-anchor="middle" opacity="0.5">Nom du fichier : infra-4.jpg</text>
+</svg>
